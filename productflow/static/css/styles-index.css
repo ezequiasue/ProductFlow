@@ -1,0 +1,78 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    height: 100%; /* Garante que o body e o html ocupem toda a altura */
+}
+
+/* Layout geral: usando Flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima para preencher toda a janela */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex; /* Alinha os itens horizontalmente */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    margin-left: 15px;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.navbar .menu a:hover {
+    background-color: #575757;
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1; /* Faz o conteúdo crescer para empurrar o footer para baixo */
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

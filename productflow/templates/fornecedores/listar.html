@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Fornecedores</title>
+</head>
+<body>
+    <h1>Fornecedores</h1>
+    <ul>
+        {% for fornecedor in fornecedores %}
+            <li>{{ fornecedor.nome }} - CNPJ: {{ fornecedor.cnpj }}</li>
+        {% empty %}
+            <li>Nenhum fornecedor cadastrado.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Voltar</a>
+</body>
+</html>

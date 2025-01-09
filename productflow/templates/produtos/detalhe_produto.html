@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+    <h1>{{ produto.nome }}</h1>
+    <p><strong>Descrição:</strong> {{ produto.descricao }}</p>
+    <p><strong>Preço:</strong> R$ {{ produto.preco }}</p>
+    <p><strong>Quantidade em Estoque:</strong> {{ produto.quantidade_em_estoque }}</p>
+    <p><strong>Categoria:</strong> {{ produto.categoria }}</p>
+    <p><strong>Fornecedor:</strong> {{ produto.fornecedor }}</p>
+
+    <a href="{% url 'lista_produtos' %}">Voltar para a lista de produtos</a>
+</body>
+</html>
