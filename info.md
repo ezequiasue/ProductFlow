@@ -18,3 +18,5 @@ Get-ChildItem -Path $env:USERPROFILE\.ssh
 
 ssh-keygen -t rsa -b 4096 -C "phd.esantos@gmail.com"
 
+Renomeie a branch local de master para main:
+git branch -m master main
